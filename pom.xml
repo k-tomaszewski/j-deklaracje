@@ -31,8 +31,11 @@
             <artifactId>javax.jws-api</artifactId>
             <version>1.1</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -56,9 +59,7 @@
                         <id>generate-sources</id>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <!--
-                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
-                            -->
+                            <additionalJvmArgs>-Dlogback.configurationFile=${basedir}/src/main/resources/logback.xml</additionalJvmArgs>
                             <wsdlOptions>
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/e-deklaracje/dokumenty.wsdl</wsdl>
@@ -67,6 +68,8 @@
                                         <extraarg>-p</extraarg>
                                         <extraarg>pl.gov.mf.edeklaracje</extraarg>
                                         <extraarg>-mark-generated</extraarg>
+                                        <extraarg>-frontend</extraarg>
+                                        <extraarg>jaxws21</extraarg>
                                     </extraargs>
                                 </wsdlOption>
                             </wsdlOptions>
