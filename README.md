@@ -9,10 +9,12 @@ the information system of the Polish Ministry of Finance given that:
 - one has XML file representing a tax declaration
 - one is going to authenticate using the amount of income from previous year tax declaration (so no digital signature required)
 
+The software must be able to fetch official submitting confirmation document "UPO".
+
 ## Documentation
 * Basic specification: [https://www.podatki.gov.pl/e-deklaracje/dokumentacja-it/]
 
 ## Technologies
 - Java 11
-- Apache CXF
+- Apache CXF, cxf-codegen-plugin 
 - Maven
