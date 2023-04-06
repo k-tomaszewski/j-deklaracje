@@ -1,7 +1,9 @@
 # j-deklaracje
-Java tool for submitting Polish tax declarations into official e-Deklaracje system. Polish government published
-specification of a document submitting interface that can be used by any external system to submit Polish tax
+The project was planned as a Java tool for submitting Polish tax declarations into official e-Deklaracje system. 
+Polish government published specification of a document submitting interface that can be used by any external system to submit Polish tax
 declarations on behalf of a tax payer.
+
+**As of 2023 this is still not ready and ended rather as certificate fetching and verification use case.**
 
 ## Goal
 The basic goal is to provide an open source, Java-based software that can submit an annual tax declaration into 
